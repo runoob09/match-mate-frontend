@@ -3,3 +3,11 @@ html body #app{
   padding: 0;
   height: 100%;
 }
+
+.text {
+  font-size: 16px;
+  padding: 0 15px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #969799;
+}

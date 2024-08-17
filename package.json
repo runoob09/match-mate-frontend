@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/node": "^22.3.0",
     "vant": "^4.9.4",
-    "vue": "^3.4.35"
+    "vue": "^3.4.35",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@vant/auto-import-resolver": "^1.2.1",
