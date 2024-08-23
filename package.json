@@ -4,17 +4,20 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --mode development",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "@types/node": "^22.3.0",
+    "axios": "^1.7.4",
+    "qs": "^6.13.0",
     "vant": "^4.9.4",
     "vue": "^3.4.35",
     "vue-router": "4"
   },
   "devDependencies": {
+    "@types/qs": "^6.9.15",
     "@vant/auto-import-resolver": "^1.2.1",
     "@vitejs/plugin-vue": "^5.1.2",
     "typescript": "^5.5.3",
