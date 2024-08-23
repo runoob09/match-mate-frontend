@@ -39,7 +39,6 @@ const moreResult = useLoadMore<User.CurrentUser>({
     <template v-else>
       <van-list
         :loading="moreResult.isLoading.value"
-        loading-text="加载中"
         :finished="moreResult.isFinish.value"
         finished-text="没有更多了"
         @load="moreResult.loadMore"
@@ -66,7 +65,7 @@ const moreResult = useLoadMore<User.CurrentUser>({
             <van-button size="small">联系我</van-button>
           </template>
         </van-card>
-
+        <van-loading size="24px" style="text-align: center" v-show="moreResult.isLoading.value">加载中...</van-loading>
       </van-list>
     </template>
   </template>

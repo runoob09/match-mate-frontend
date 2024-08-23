@@ -36,11 +36,12 @@ export function useLoadMore<T>(useLoadMoreOptions: UseLoadMoreOptions<T>): UseLo
   };
   // 上拉加载函数
   const loadMore = async () => {
-    isLoading.value = true;
     try {
       if (isFinish.value){
+        isLoading.value = false;
         return;
       }
+      isLoading.value=true
       pageNum++;
       const res = await useLoadMoreOptions.api(useLoadMoreOptions.params, pageNum, pageSize);
       const moreData = res.data; // 上拉加载到的数据
@@ -53,8 +54,8 @@ export function useLoadMore<T>(useLoadMoreOptions: UseLoadMoreOptions<T>): UseLo
     } catch (e) {
       pageNum--;
       console.error(e);
-    } finally {
-      isLoading.value = false;
+    }finally {
+      isLoading.value=false
     }
   };
   firstLoading();
